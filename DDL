@@ -1,0 +1,89 @@
+-- public.admins definition
+
+-- Drop table
+
+-- DROP TABLE admins;
+
+CREATE TABLE admins (
+	id bigserial NOT NULL,
+	telegram_id varchar(50) NOT NULL,
+	first_name varchar(50) NULL,
+	last_name varchar(50) NULL,
+	CONSTRAINT admins_pkey PRIMARY KEY (id)
+);
+
+
+-- public.channels definition
+
+-- Drop table
+
+-- DROP TABLE channels;
+
+CREATE TABLE channels (
+	id bigserial NOT NULL,
+	telegram_id varchar(50) NOT NULL,
+	"name" varchar(50) NULL,
+	CONSTRAINT channels_pkey PRIMARY KEY (id)
+);
+
+
+-- public.horoscope_joke definition
+
+-- Drop table
+
+-- DROP TABLE horoscope_joke;
+
+CREATE TABLE horoscope_joke (
+	id bigserial NOT NULL,
+	sign varchar(15) NOT NULL,
+	"text" text NULL,
+	"date" date NOT NULL DEFAULT CURRENT_DATE,
+	CONSTRAINT horoscope_joke_pkey PRIMARY KEY (id)
+);
+
+
+-- public.horoscope_love definition
+
+-- Drop table
+
+-- DROP TABLE horoscope_love;
+
+CREATE TABLE horoscope_love (
+	id bigserial NOT NULL,
+	sign varchar(15) NOT NULL,
+	"text" text NULL,
+	"date" date NOT NULL DEFAULT CURRENT_DATE,
+	CONSTRAINT horoscope_love_pkey PRIMARY KEY (id)
+);
+
+
+-- public.horoscope_regular definition
+
+-- Drop table
+
+-- DROP TABLE horoscope_regular;
+
+CREATE TABLE horoscope_regular (
+	id bigserial NOT NULL,
+	sign varchar(15) NOT NULL,
+	"text" text NULL,
+	"date" date NOT NULL DEFAULT CURRENT_DATE,
+	CONSTRAINT horoscope_regular_pkey PRIMARY KEY (id)
+);
+
+
+-- public.users definition
+
+-- Drop table
+
+-- DROP TABLE users;
+
+CREATE TABLE users (
+	id bigserial NOT NULL,
+	telegram_id varchar(50) NOT NULL,
+	first_name varchar(50) NULL,
+	last_name varchar(50) NULL,
+	is_premium varchar NULL,
+	"date" date NULL DEFAULT CURRENT_DATE,
+	CONSTRAINT users_pkey PRIMARY KEY (id)
+);
